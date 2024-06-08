@@ -1,7 +1,10 @@
-Subtheme Sentiments
-Idea is to develop an approach that given a sample will identify the sub-themes along with their respective sentiments.
+Subtheme Sentiments Analysis-:
 
-Screenshot-2020-10-03-042959Data Exploration
+Overview-:
+The objective of this project is to identify sub-themes and their respective sentiments in given text samples, such as reviews.
+
+Approach
+Data Exploration
 The initial dataset comprised around 10,000 data points with approximately 90 unique labels. After preprocessing and addressing label frequency issues, we reduced the data to 6,000 points with 23 unique labels. Detailed exploration can be found in the Data Exploration document.
 
 Model Selection
@@ -14,3 +17,8 @@ For simplicity and efficiency, the bert-base-uncased model was selected despite 
 
 Training Details
 We used Binary Cross Entropy with Logits as the loss function. The model was trained for 5 epochs before overfitting was observed. More details are available in the Model Analysis document.
+
+Performance Metrics
+Micro F1 Score: Reflects overall performance, particularly useful for imbalanced classes.
+Macro F1 Score: Calculates the mean of F1 scores for each label, not accounting for label imbalance.
+Hamming Loss: Measures the fraction of incorrect labels.
